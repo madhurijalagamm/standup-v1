@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    div {
+        width: 320px;
+        padding: 0px;
+        border: 2.5px solid gray;
+        margin: 0;
+       
+      }
+      </style>
+    <title>Jokes Page</title>
+  </head>
+  <body>
+    <h1>Jokes</h1>
+    
+      {% for joke in jokes %}
+      <div class="joke_box">
+        {{ joke.0 }} 
+        <p style="text-align: right; margin: 0; padding: 0;">
+        {{ joke.1 }} 
+        {{ joke.2 }} </p> <br>
+    </div>
+    
+      {% endfor %}
+    
+  </body>
+</html>
