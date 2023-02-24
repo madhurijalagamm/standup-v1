@@ -6,6 +6,9 @@
                 font-family: Arial, Helvetica, sans-serif;
                 background-color: white;
             }
+            h1{
+                margin-bottom: 0px;
+            }
             button{
                 background-color: #4CAF50;
                 width: 25%;
@@ -79,6 +82,8 @@
             }
         </style>
     </head>
+    <center><h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 100px;"><b>STAND UP COMEDY CLUB</b></h1></center>
+
     <body>
         <div class="navbar">
             <ul>
@@ -95,9 +100,7 @@
             {% csrf_token %}
             {% load static %}
             <center><div class="container">
-                <div class="imgcontainer">
-                    <img src="{% static 'avatar_img2.png' %}" alt="Avatar" class="avatar">
-                </div>
+                
                 <label for='joke'><b>Joke : </b></label>
 		        <input type='text' placeholder="Enter your best joke" name='joke' required><br>
                 <p> Note: Do not enter obscene or offensive jokes</p>
