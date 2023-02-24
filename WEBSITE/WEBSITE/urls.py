@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from home.views import homeaction
 from signup.views import signaction
 from login.views import loginaction
 from jokes.views import jokeaction
@@ -28,5 +29,7 @@ urlpatterns = [
     path('jokes/', jokeaction),
     path('seejokes/', joke_list),
     path('performers/', performeraction),
+    path('welcome/', homeaction),
+
 
 ]

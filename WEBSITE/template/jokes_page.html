@@ -90,7 +90,7 @@
                 <li><a href="http://localhost:8000/signup/">Sign Up</a></li>
             </ul>
         </div>
-        <center><h1>Give Jokes, baby!</h1></center>
+        <center><h1>Give your Best Shot!</h1></center>
         <form action="#" method="post">
             {% csrf_token %}
             {% load static %}
@@ -99,8 +99,9 @@
                     <img src="{% static 'avatar_img2.png' %}" alt="Avatar" class="avatar">
                 </div>
                 <label for='joke'><b>Joke : </b></label>
-		        <input type='text' placeholder="Enter your joke" name='joke' required><br>
-		        
+		        <input type='text' placeholder="Enter your best joke" name='joke' required><br>
+                <p> Note: Do not enter obscene or offensive jokes</p>
+
             	<button type="submit"><b>Submit</b></button><br>     
             	
             </div></center>
