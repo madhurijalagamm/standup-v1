@@ -21,12 +21,16 @@ from login.views import loginaction
 from jokes.views import jokeaction
 from jokes.views import joke_list
 from performers.views import performeraction
+from jokes.views import create_joke
+from signup.views import create_user
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('signup/', signaction),
+    path('jokes/', create_joke),
+    path('signup/', create_user),
     path('login/', loginaction),
-    path('jokes/', jokeaction),
+    # path('jokes/', jokeaction),
     path('seejokes/', joke_list),
     path('performers/', performeraction),
     path('welcome/', homeaction),

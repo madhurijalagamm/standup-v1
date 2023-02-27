@@ -59,12 +59,12 @@
   </div>
     <h1>Jokes</h1>
     
-      {% for joke in jokes %}
+      {% for j in jokes %}
       <div class="joke_box">
-        {{ joke.0 }} 
+        {{ j.joke_text }} 
         <p style="text-align: right; margin: 0; padding: 0;">
-        {{ joke.1 }} 
-        {{ joke.2 }} </p> <br>
+        {{ j.upvote }} 
+        {{ j.downvote }} </p> <br>
     </div>
     
       {% endfor %}

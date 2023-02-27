@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'login',
     'signup',
     'jokes',
+    'performers',
+    'home',
     
 ]
 
