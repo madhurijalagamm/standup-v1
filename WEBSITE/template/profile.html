@@ -1,0 +1,88 @@
+{% extends 'base3.html' %}
+{% block content%}
+{% if user.is_authenticated %}
+<style>
+  container {
+    margin: 20px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: #B3B8CD;
+	padding-top: 0px;
+	position: relative;
+	width: 350px;
+	max-width: 100%;
+	text-align: center;
+
+}
+
+.card-container .pro {
+	color: #231E39;
+	background-color: #ffffff;
+    font-family: 'Happy Monkey', cursive;
+	border-radius: 3px;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 3px 7px;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+}
+
+.card-container .round {
+	/* border: 1px solid #03BFCB; */
+	border-radius: 5%;
+	padding: 7px;
+}
+.buttons{
+    margin: 20px;
+}
+button.primary a{
+    text-decoration: none;
+}
+button.primary{
+	/* background-color: #03BFCB;
+	border: 1px solid #03BFCB; */
+	border-radius: 3px;
+	color: #231E39;
+	font-family: Montserrat, sans-serif;
+	font-weight: 500;
+	padding: 10px 25px;
+}
+
+p, h3, .nav-item2 {
+  color:white;
+  border: 1px solid white;
+  width: 20%;
+  margin: 10px;
+  padding: 10px;
+}
+
+
+button.primary.ghost {
+	background-color: transparent;
+	color: #02899C;
+}
+</style>
+	<center>
+    <div class="card-container">
+      <!-- <img class="round" src="../static/images/naf2.png" width=" 350px" height = "350px"alt="user" /> -->
+      <h3>Name: {{user.first_name}} {{ user.last_name}}</h3>
+      <p>Username: {{user.username}}</p>
+      <p>Email: {{user.email}}</p>
+      <li class="nav-item2">
+        <a class="nav-link2" href="{% url 'edit_profile' %}">Edit Profile</a>
+      </li>
+    
+
+
+      
+      
+  </div>  
+    
+    
+    
+    
+</center>
+{% endif %}
+{% endblock %}

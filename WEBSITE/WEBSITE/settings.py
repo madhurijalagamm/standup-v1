@@ -37,11 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'login',
-    'signup',
-    'jokes',
+    'authentication',
+    'admin_dashboard',
+    # 'jokes',
+    'jokess',
     'performers',
     'home',
+    'tickets',
     
 ]
 

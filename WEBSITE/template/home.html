@@ -1,0 +1,613 @@
+{% extends 'base3.html' %}
+
+{% block content %}
+<br>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="styles_cards.css">
+<script src='js2.js'></script> -->
+
+
+
+
+
+
+
+	<h1 style="
+        font-family: Arial, sans-serif;
+        color: rgb(255, 255, 255);
+        text-align: left;
+        margin-left: 250px;">we are</h1>
+        <center><h1 style=" color: rgb(255, 255, 255); 
+        font-family: 'Delicious Handrawn', cursive;
+        font-size:300px; 
+        font-weight: bold; 
+        letter-spacing: -1px; 
+        line-height: 1; 
+        text-align: center;">el comicos</h1></center>
+        
+	<p style="color: rgb(255, 255, 255); font-family: 'Open Sans', sans-serif; font-size: 30px; font-weight: 300; line-height: 32px; margin: 0 0 72px; text-align: center;">Get your daily dose of laughter with our stand-up comedy shows</p><br><br>
+
+
+  <script>
+    function Hide(HideID) 
+  {
+    HideID.style.display = "none"; 
+  }
+  </script>
+  <div class="ShowHide" id="Bar" onclick="Hide(Bar);">
+    <!-- <div id="right">
+      <a href="#" onclick="Hide(Bar);">X</a>
+    </div> -->
+    <div id="left">
+      {% for announcement in announcements %}
+      <center><div style=" background-color: rgba(255, 255, 255, 0.763);" >
+      
+      <b>Announcement:  </b> {{ announcement.content }}      !!!!!!!!!!
+      </div></center>
+      {% endfor %}
+    </div>
+  </div>
+  <br>
+  <br>
+
+  
+
+    <style>
+        .banner {
+			position: relative;
+			width: 90%;
+			height: 500px;
+			background-color: #ccc;
+			overflow: hidden;
+
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+
+		}
+		.banner img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition: opacity 1s ease-in-out;
+		}
+		.banner img.active {
+			opacity: 1;
+		}
+
+    </style>
+    <!-- <center><p style="font-family: 'Delicious Handrawn', cursive;
+        font-size: 100px;">OUR events</p></center><br> -->
+
+    <center><div class="banner">
+    <a href="https://ibb.co/QdhLKr5"><img src="https://i.ibb.co/ws8VzMv/elcomicos.png" class="active" alt="elcomicos" border="0"></a>
+    <a href="https://example.com"><img src="../static/images/halloween.png"></a>
+    <a href="https://ibb.co/601SY2k"><img src="https://i.ibb.co/r2chkgV/Purple-Minimalist-Fashion-Sale-Facebook-Post-1500-600-px.png" alt="Purple-Minimalist-Fashion-Sale-Facebook-Post-1500-600-px" border="0"></a>	</div></center>
+    <script>
+		var slides = document.querySelectorAll('.banner img');
+		var currentSlide = 0;
+		var slideInterval = setInterval(nextSlide, 5000);
+
+		function nextSlide() 
+        {
+			slides[currentSlide].classList.remove('active');
+			currentSlide = (currentSlide + 1) % slides.length;
+			slides[currentSlide].classList.add('active');
+		}
+	
+	</script>
+    <br>
+	<p style="color: rgb(255, 255, 255); font-family: 'Open Sans', sans-serif; font-size: 30px; font-weight: 300; line-height: 32px; margin: 0 0 72px; text-align: center;">
+        The perfect place to unwind and have a good laugh with friends.</p><br>
+
+
+
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+
+        <div class="container">
+            <center><p style="font-family: 'Delicious Handrawn', cursive;
+                font-size: 100px; color: white;">OUR shows</p></center><br>
+
+
+        <center><div class="card-wholething">
+          <script>let activeIndex = 0;
+
+            const groups = document.getElementsByClassName("card-group");
+            
+            const handleLoveClick = () => {
+              const nextIndex = activeIndex + 1 <= groups.length - 1 ? activeIndex + 1 : 0;
+              
+              const currentGroup = document.querySelector(`[data-index="${activeIndex}"]`),
+                    nextGroup = document.querySelector(`[data-index="${nextIndex}"]`);
+                    
+              currentGroup.dataset.status = "after";
+              
+              nextGroup.dataset.status = "becoming-active-from-before";
+              
+              setTimeout(() => {
+                nextGroup.dataset.status = "active";
+                activeIndex = nextIndex;
+              });
+            }
+            
+            const handleHateClick = () => {
+              const nextIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : groups.length - 1;
+              
+              const currentGroup = document.querySelector(`[data-index="${activeIndex}"]`),
+                    nextGroup = document.querySelector(`[data-index="${nextIndex}"]`);
+              
+              currentGroup.dataset.status = "before";
+              
+              nextGroup.dataset.status = "becoming-active-from-after";
+              
+              setTimeout(() => {
+                nextGroup.dataset.status = "active";
+                activeIndex = nextIndex;
+              });
+            }
+            </script>
+            <style>
+              /* body {
+  background-color: rgb(0, 0, 0);  
+  margin: 0px;  
+  height: 100vh;
+  
+  display: grid;
+  place-items: center;
+} */
+
+.card-groups,
+.card-group,
+.card {
+  aspect-ratio: 5 / 7;
+}
+
+.card-groups,
+.card-group,
+.big-card {  
+  width: 30vmin;
+}
+
+.card-group {
+  position: absolute;
+  transition: transform 400ms ease;
+}
+
+.card-group[data-status="unknown"] {
+  transform: scale(0);
+  transition: none;
+}
+
+.card-group[data-status="active"] {
+  transition-delay: 300ms;
+}
+
+.card-group[data-status="after"] {
+  transform: translateX(50%) scale(0);
+}
+
+.card-group[data-status="before"] {
+  transform: translateX(-50%) scale(0);
+}
+
+.card-group[data-status="becoming-active-from-after"] {
+  transform: translateX(50%) scale(0);
+  transition: none;
+}
+
+.card-group[data-status="becoming-active-from-before"] {
+  transform: translateX(-50%) scale(0);
+  transition: none;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  transition: transform 800ms cubic-bezier(.05,.43,.25,.95);
+  
+  background-position: center;
+  background-size: cover;
+}
+
+.big-card {
+  border-radius: 1vmin;
+}
+
+.little-card {
+  width: 12vmin;
+  border-radius: 2vmin;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: -1vmin 1vmin 2vmin rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+.big-card:nth-child(6) {
+  background-image: url("https://i.ibb.co/MSBkhPR/halloween-final.jpg");
+  transform: translateX(-6%) rotate(-3deg);
+}
+
+.big-card:nth-child(8) {
+  background-image: url("https://i.ibb.co/JvDSKt7/poster4.jpg"); 
+  /* standup */
+  transform: translate(10%, 3%) rotate(5deg);
+}
+
+.card-group[data-index="1"] > .big-card:nth-child(6) {
+  background-image: url("");
+}
+
+.card-group[data-index="1"] > .big-card:nth-child(8) {
+  background-image: url("");
+}
+
+.card-group[data-index="2"] > .big-card:nth-child(4) {
+  background-image: url("");
+}
+
+.card-group[data-index="1"] > .big-card:nth-child(8) {
+  background-image: url("");
+}
+
+.card-group[data-index="2"] > .big-card:nth-child(4) {
+  background-image: url("");
+}
+
+.card-group[data-index="2"] > .big-card:nth-child(8) {
+  background-image: url("");
+}
+
+.little-card:nth-child(1) {
+  background-image: url("");
+  
+}
+
+.little-card:nth-child(3) {
+  background-image: url("");
+  
+}
+
+.little-card:nth-child(5) {
+  background-image: url("");
+  
+}
+
+.little-card:nth-child(7) {  
+  background-image: url("");
+
+}
+
+.card-group:hover > .card {  
+  box-shadow: -2vmin 2vmin 3vmin rgba(0, 0, 0, 0.4);
+}
+
+.card-group:hover > .big-card:nth-child(2) {
+  transform: translate(-75%, 16%) rotate(-24deg);
+}
+
+.card-group:hover > .big-card:nth-child(4) {
+  transform: translate(-25%, 8%) rotate(-8deg);
+}
+
+.card-group:hover > .big-card:nth-child(6) {
+  transform: translate(25%, 8%) rotate(8deg);
+}
+
+.card-group:hover > .big-card:nth-child(8) {
+  transform: translate(75%, 16%) rotate(24deg);
+}
+
+.card-group:hover > .little-card:nth-child(1) {
+  transform: translate(200%, -160%) rotate(-15deg);
+}
+
+.card-group:hover > .little-card:nth-child(3) {
+  transform: translate(160%, 170%) rotate(15deg);
+}
+
+.card-group:hover > .little-card:nth-child(5) {
+  transform: translate(-200%, -170%) rotate(15deg);
+}
+
+.card-group:hover > .little-card:nth-child(7) {
+  transform: translate(-280%, 140%) rotate(-15deg);
+}
+
+.card-swiper-buttons {
+  margin-top: 8vmin;
+  display: flex;
+  justify-content: space-around;  
+  padding: 0vmin 4vmin;
+}
+
+.card-swiper-buttons > button {
+  font-size: 2.5vmin;
+  border: 0.4vmin solid rgb(200, 200, 200);
+  border-radius: 100%;
+  color: white;
+  background-color: transparent;
+  height: 7vmin;
+  width: 7vmin;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+#love-button, #hate-button {
+  color: rgb(33, 150, 243);
+  border-color: rgb(33, 150, 243);
+}
+
+/* -- YouTube Link Styles -- */
+
+body.menu-toggled > .meta-link > span {
+  color: rgb(30, 30, 30);
+}
+
+#source-link {
+  bottom: 60px;
+}
+
+#source-link > i {
+  color: rgb(94, 106, 210);
+}
+
+#yt-link > i {
+  color: rgb(239, 83, 80);
+}
+
+.meta-link {
+  align-items: center;
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  bottom: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;  
+  display: inline-flex;
+  gap: 5px;
+  left: 10px;
+  padding: 10px 20px;
+  position: fixed;
+  text-decoration: none;
+  transition: background-color 400ms, border-color 400ms;
+  z-index: 10000;
+}
+
+.meta-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.meta-link > i, .meta-link > span {
+  height: 20px;
+  line-height: 20px;
+}
+
+.meta-link > span {
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+
+
+.card-group:hover > .card {  
+  box-shadow: -2vmin 2vmin 3vmin rgba(0, 0, 0, 0.4);
+}
+
+.card-group:hover > .big-card:nth-child(2) {
+  transform: translate(-75%, 16%) rotate(-24deg);
+}
+
+.card-group:hover > .big-card:nth-child(4) {
+  transform: translate(-25%, 8%) rotate(-8deg);
+}
+
+.card-group:hover > .big-card:nth-child(6) {
+  transform: translate(25%, 8%) rotate(8deg);
+}
+
+.card-group:hover > .big-card:nth-child(8) {
+  transform: translate(75%, 16%) rotate(24deg);
+}
+
+.card-group:hover > .little-card:nth-child(1) {
+  transform: translate(200%, -160%) rotate(-15deg);
+}
+
+.card-group:hover > .little-card:nth-child(3) {
+  transform: translate(160%, 170%) rotate(15deg);
+}
+
+.card-group:hover > .little-card:nth-child(5) {
+  transform: translate(-200%, -170%) rotate(15deg);
+}
+
+.card-group:hover > .little-card:nth-child(7) {
+  transform: translate(-280%, 140%) rotate(-15deg);
+}
+
+.card-swiper-buttons {
+  margin-top: 8vmin;
+  display: flex;
+  justify-content: space-around;  
+  padding: 0vmin 4vmin;
+}
+
+.card-swiper-buttons > button {
+  font-size: 2.5vmin;
+  border: 0.4vmin solid rgb(200, 200, 200);
+  border-radius: 100%;
+  color: white;
+  background-color: transparent;
+  height: 7vmin;
+  width: 7vmin;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+#love-button {
+  color: rgb(33, 150, 243);
+  border-color: rgb(33, 150, 243);
+}
+
+/* -- YouTube Link Styles -- */
+
+body.menu-toggled > .meta-link > span {
+  color: rgb(30, 30, 30);
+}
+
+#source-link {
+  bottom: 60px;
+}
+
+#source-link > i {
+  color: rgb(94, 106, 210);
+}
+
+#yt-link > i {
+  color: rgb(239, 83, 80);
+}
+
+.meta-link {
+  align-items: center;
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  bottom: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;  
+  display: inline-flex;
+  gap: 5px;
+  left: 10px;
+  padding: 10px 20px;
+  position: fixed;
+  text-decoration: none;
+  transition: background-color 400ms, border-color 400ms;
+  z-index: 10000;
+}
+
+.meta-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.meta-link > i, .meta-link > span {
+  height: 20px;
+  line-height: 20px;
+}
+
+.meta-link > span {
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+            </style>
+          <div class="card-swiper">
+  <div class="card-groups">
+    <div class="card-group" data-index="0" data-status="active">
+      <div class="little-card card">
+
+      </div>
+      <div class="big-card card">
+
+      </div>
+      <div class="little-card card">
+
+      </div>
+      <div class="big-card card">
+
+      </div>
+      <div class="little-card card">
+
+      </div>
+      <div class="big-card card">
+
+      </div>
+      <div class="little-card card">
+
+      </div>
+      <div class="big-card card">
+
+      </div>
+    </div>
+    <div class="card-group" data-index="1" data-status="unknown">
+      <div class="little-card card">
+
+      </div>
+      <div class="big-card card">
+
+      </div>
+      <div class="little-card card">
+
+      </div>
+      <div class="big-card card">
+
+      </div>
+      <div class="little-card card">
+
+      </div>
+      <div class="big-card card">
+
+      </div>
+      <div class="little-card card">
+
+      </div>
+      <div class="big-card card">
+
+      </div>
+    </div>
+    <div class="card-group" data-index="2" data-status="unknown">
+      <div class="little-card card">
+
+      </div>
+      <div class="big-card card">
+
+      </div>
+      <div class="little-card card">
+
+      </div>
+      <div class="big-card card">
+
+      </div>
+      <div class="little-card card">
+
+      </div>
+      <div class="big-card card">
+
+      </div>
+      <div class="little-card card">
+
+      </div>
+      <div class="big-card card">
+
+      </div>
+    </div>
+  </div>
+  <div class="card-swiper-buttons">
+    <button id="hate-button" onclick="handleHateClick()">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        
+
+            </button>
+    <button id="love-button" onclick="handleLoveClick()">
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </div>
+        </div>
+      </div></center><hr>
+
+            
+
+{% endblock %}

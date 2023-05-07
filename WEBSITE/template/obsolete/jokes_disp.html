@@ -1,0 +1,115 @@
+{% extends 'base.html'%}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    .joke_box{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: larger;
+        padding: 5px;
+        border: 2.5px solid gray;
+        margin: 0;
+        margin-bottom: 10px;
+       
+      }
+      h1{
+        margin-bottom: 0px;
+        margin-top:0px;
+      }
+      .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+
+            }
+
+            .navbar li {
+            float: left;
+            }
+
+            .navbar li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            /* Change the link color to #111 (black) on hover */
+            .navbar li a:hover {
+            background-color: #111;
+            }
+
+            .rating {
+  display:contents;
+  width: 18%;
+
+  text-align: right;
+}
+
+.like,
+.dislike {
+  display:inline-flex;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.dislike:hover,
+.like:hover {
+  color: #2EBDD1;
+  transition: all .2s ease-in-out;
+  transform: scale(1.1);
+}
+
+.active {
+  color: #2EBDD1;
+}
+      </style>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Jokes Page</title>
+  </head>
+  <body>
+    
+    <h1>Jokes</h1>
+    
+      {% for j in jokes %}
+      <div class="joke_box">
+        <div class="id">{{j.id }}</div> 
+        {{ j.joke_text }} 
+        <p style="text-align: right; margin: 0; padding: 0;">
+          <div class="rating">
+            <!-- Thumbs up -->
+            <div class="myButton">
+              <script>
+                let text = document.getElementById("").textContent;
+                document.getElementById("demo").innerHTML = text;
+              const button = document.getElementById('myButton');
+              button.addEventListener('click', function() {
+              console.log('Button clicked!');
+              });</script>
+
+
+              <button id="myButton" onclick="document.write()">upvote!</button>
+
+              <i class="fa fa-thumbs-up fa-3x like" aria-hidden="true"></i>
+            </div>
+            <!-- Thumbs down -->
+            <div class="dislike grow">
+              <i class="fa fa-thumbs-down fa-3x like" aria-hidden="true"></i>
+            </div>
+          </div>
+          
+          {{ j.upvote }} 
+          {{ j.downvote }} </p> <br>
+    </div>
+    
+      {% endfor %}
+    
+  </body>
+
+</html>

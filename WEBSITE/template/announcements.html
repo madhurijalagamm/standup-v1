@@ -1,0 +1,75 @@
+{% extends 'base3.html' %}
+{% block content %}
+<style>
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  color:white;
+}
+
+.post-form label {
+  font-weight: bold;
+}
+
+.post-form input[type="text"],
+.post-form textarea {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.post-form input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.post-form input[type="submit"]:hover {
+  background-color: #0069d9;
+}
+    .ind_annon{
+        color: white;
+
+        background-color: black;
+        padding: 20px;
+        border: 1px solid #fff;
+    }
+    .ind_annon h2{
+        text-decoration: none;
+        
+    }
+    
+
+</style>
+    <div class="post-form">
+        <center>
+            <h2>Add Announcement</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    <label for="title">Title:</label><br>
+                    <input type="text" id="title" name="title"><br>
+                    <label for="content">Content:</label><br>
+                    <textarea id="content" name="content"></textarea><br>
+                    <input type="submit" value="Add Announcement">
+                </form>
+            </div>
+        </center>
+    <h1 style="color: white;">Announcements</h1>
+    {% for announcement in announcements %}
+    <div class="ind_annon">
+        <h2>{{ announcement.title }}</h2>
+        <p>{{ announcement.content }}</p>
+        <p>Posted on {{ announcement.date }}</p>
+    </div>
+    {% endfor %}
+
+    
+{% endblock %}
